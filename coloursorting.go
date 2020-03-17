@@ -59,10 +59,15 @@ func rgbToHSV(r, g, b float64) (h, s, v float64) {
 	return
 }
 
+// StepSort implements a roughly hue-based colour sorting algorithm based on the
+// "Step Sorting" section from https://www.alanzucconi.com/2015/09/30/colour-sorting/.
 type StepSort [][3]int
 
+// Len simply retrieves the length of the slice.
 func (a StepSort) Len() int { return len(a) }
+// Swap swaps the elements at i and j.
 func (a StepSort) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
+// Less determines whether the element at i is less than the element at j.
 func (a StepSort) Less(i, j int) bool {
 	is0, is1, is2 := step(a[i][0], a[i][1], a[i][2], 8)
 	js0, js1, js2 := step(a[j][0], a[j][1], a[j][2], 8)
