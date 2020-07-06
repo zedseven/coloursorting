@@ -1,5 +1,5 @@
 # coloursorting
-[![GoDoc](https://godoc.org/github.com/zedseven/coloursorting?status.svg)](https://godoc.org/github.com/zedseven/coloursorting)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GoDoc](https://godoc.org/github.com/zedseven/coloursorting?status.svg)](https://godoc.org/github.com/zedseven/coloursorting)
 
 A simple Go package for sorting a slice of colours in a visually pleasing way.
 
